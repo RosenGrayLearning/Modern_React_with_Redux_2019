@@ -1,0 +1,22 @@
+/******************** lodash _,memoize ********************/
+
+npm install --save lodash
+
+- When sending multiple requests to the same end point 
+- like our case, we sent 100 different reuests instead of 10, because 
+   we had to send reuqest for each post (when we have only 10 users )
+- when using memoize(ourFunction) function, it helps us with this behvaiour.
+- the memoize(ourFunction) takes in a referance to the function that was created by us
+    (which is sending some request)
+- it returns a new copy of our fuction ( memoize version of our function)
+- this new function has the same behaviour of our function, but - the only difference
+  is that we can only call this function ONE TIME WITH ANY UNIQUE SET OF ARGUMENTS
+- after we call it one time, we can still call it, but the original function 
+  will is not going actually envoked.
+- for example : 
+
+// our function : getUser();
+// const memoizedGetUser = -.memoize(getUser);
+// calling it with id 3 - memoizedGetUser(3) // invoked
+// calling it with id 3 again - memoizedGetUser(3) not invoked
+// caling it with a different argument memoizedGetUser(4) invoked.

@@ -1,0 +1,13 @@
+***************************** Hooks *****************************
+1. useState - Allow a functional component to use component level state
+2. useEffect - Allow a functional component to use 'lifecycle methods'
+3. useContext - Allow a functional component to use the context system
+4. useRef - Allow a functional component to use the ref system
+5. useReducer -  Allow a functional component to store data through a reducer
+
+and more .... 
+
+6. const [currentValue,setCurrentValue] = useState(initialValue);
+
+
+***************************** Hooks *****************************

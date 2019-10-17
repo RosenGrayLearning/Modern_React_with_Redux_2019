@@ -1,0 +1,35 @@
+/***************** Action Creators *****************/
+
+//  People Dropping off a form - (Action Creater)
+
+--------------------------------------------------------
+const createPolicy = (name,amount) => {
+  //return an Action {} (a form in our analogy)
+  return { 
+    type:'CREATE_POLICY',
+    payload: { //some infomrmation regarding our action
+      name: name,
+      amount : amount
+    } 
+  }
+};
+--------------------------------------------------------
+
+const deletePolicy = (name) => {
+  return {
+    type:'DELETE_POLOCY',
+    payload: {
+      name:name
+    }
+  };
+};
+--------------------------------------------------------
+const createClaim = (name,amountOfMoneyToCollect) => {
+  return {
+    type:'CREATE_CLAIM',
+    payload: {
+      name: name,
+      amountOfMoneyToCollect : amountOfMoneyToCollect
+    }
+  };
+};--------------------------------------------------------

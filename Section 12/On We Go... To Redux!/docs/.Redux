@@ -1,0 +1,35 @@
+/***************** What is Redux? *****************/
+
+- state management library
+- not required to create a React-app
+/
+***************** What is Redux? *****************/
+
+/***************** Redux Cycle *****************/
+
+- Action Creator - Person dropping off the form
+- Action - the form it self ( the form has a type and payload)
+- Dispatch - form reciver. takes in the action, will make copies of 
+             it and pass it to different part in our application
+- Reducers - Departments(claim, polisy...); function which takes in a function and some data
+             it going to process that action and the data, make change in the data 
+             and return the updated data
+- State - Complied department data. Central repositry which holds the relevan data
+          that is relevant to our all application and 
+           can be retrived from all part of our App
+
+
+1. every time we want to change the state or the data of our application
+   we are calling an action creator
+2. calling an action creator is going to produce an action object
+   which describes how exactly we want to change our data inside our app
+3. dispatch take in our actions and forwards it to our reducers
+ (dispatch runs the entire cycle)
+4. the reducers going to run, they will take our data and return new data
+5. the data that returned is going to our new state object
+
+
+
+
+
+/***************** Redux Cycle *****************/

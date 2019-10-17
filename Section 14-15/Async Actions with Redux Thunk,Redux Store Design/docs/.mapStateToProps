@@ -1,0 +1,17 @@
+/******************** ownProp Argument ********************/
+
+- in mapStateToProps - we can define another argument --> ownProp
+- ownProp is a referance to our props component in which our 
+   stateToProps function is being used
+
+- example : 
+
+const mapStateToPops = (state,ownProps) => {
+    console.log(ownProps)
+    return {
+        users: state.users.find(user=>user.id === ownProps.userId)
+    }
+}
+
+
+/******************** ownProp Argument ********************/

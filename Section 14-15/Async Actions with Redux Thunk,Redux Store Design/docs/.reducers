@@ -1,0 +1,19 @@
+/******************** Dummy Reducers ********************/
+
+- just a property which takes a function and return statment
+
+export default combineReducers({
+    dummy : () => 'hi there'
+});
+
+/******************** Dummy Reducers ********************/
+
+/******************** Rulles Of Reducers ********************/
+
+1. Must Return any values besides ' undefined'
+2. Produces 'state', or data to be used inside of
+    your app using only previous state and the action
+3. the only thing we are going to return from a reducer is a combanation of 
+   of our state and action. we are not NEVER going to reach our from outside
+   the reducer
+4. Must not mutate its input state argument

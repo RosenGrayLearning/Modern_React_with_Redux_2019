@@ -1,0 +1,11 @@
+************************ Context System ************************
+- passing data to any child component from the Parrent component
+- unlike regular prop system - passing data from parent component
+  to direct child component 
+- an object that we have to pass information in and get the information as well
+- there are two ways for getting the info (in and out):
+- IN  defult value or Parent Component Provider --> data context object
+- Out context Object ->  this.context or Consumer
+- <LanguageContent.Provider value={} />
+
+************************ Context System ************************

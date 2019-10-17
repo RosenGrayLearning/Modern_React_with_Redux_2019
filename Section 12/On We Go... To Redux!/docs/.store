@@ -1,0 +1,25 @@
+/***************** Store *****************/
+
+const {createStore,combineReducers} = Redux;
+
+//Combine all of our reducers together 
+
+
+const ourDepartments = combineReducers({
+  accounting : accounting,
+  claimsHistory: claimsHistory,
+  policies:policies
+});
+
+const store = createStore(ourDepartments);
+
+const actionPolicy = createPolicy('Alex',20);
+
+store.dispatch(actionPolicy);
+const actionClaim= createClaim('Alex',120);
+store.dispatch(actionClaim);
+
+const actionPolicyTwo = createPolicy('Bob',170);
+store.dispatch(actionPolicyTwo);
+
+console.log(store.getState());

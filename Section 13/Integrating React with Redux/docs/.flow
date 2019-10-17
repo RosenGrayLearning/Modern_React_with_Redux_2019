@@ -1,0 +1,15 @@
+/************************** Flow *************************/
+1. create our actions and export them in actions file
+2. create our reducers , combine them and export them in our reducers file
+3. in our main index.js file we import Provider ,createStore and our reducers
+
+const root = document.querySelector('#root'),
+      store = createStore(reducers),
+      wrappedAppByProvider = <Provider store={store}><App/></Provider>;
+
+
+Store is global and can be reached by the Connect() function
+
+
+6. connect our SongList component to a Provider via connect() method
+7. Configuring Connect with MapStateToProps

@@ -1,0 +1,44 @@
+/******************** action async - bad approache ********************/
+
+- bad approache using without middleware
+
+export const fetchPosts = async () =>{
+    const response = await jsonPlaceholder.get('/posts');
+
+console.log(123)
+    return {
+        type:'FETCH_POST',
+        payload: response
+    }
+}
+
+/******************** action async - bad approache ********************/
+
+
+/******************** action async - good approache ********************/
+
+- good approache
+- redux-thunk - Middleware to help us make requests in a redux application
+- action creators with redux thunk - 
+   return  objects with type and optiona payload (As we know already) but only sync code
+   return functions with async code
+- dispatch actions mannualy
+
+
+const store = createStore(reducers,applyMiddleware(thunk));
+
+
+export const fetchPosts =  () =>{
+    return async function (dispatch,getState) {
+     
+    const response = await jsonPlaceholder.get('/posts');
+
+    dispatch({
+        type:'FETCH_POST',
+        payload:response
+    });
+    }
+}
+
+
+/******************** action async - bad approache ********************/
